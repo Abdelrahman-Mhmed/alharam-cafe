@@ -1,5 +1,5 @@
 /** رقم واتساب بدون + أو مسافات (مثال مصر: 2010xxxxxxxx) — غيّره لرقم الكافيه الفعلي */
-const WHATSAPP_NUMBER = "201000000000";
+const WHATSAPP_NUMBER = "201034453795";
 const WHATSAPP_MESSAGE =
   "مرحباً Alharam Cafe، أود الاستفسار أو الطلب بخصوص المنيو.";
 
