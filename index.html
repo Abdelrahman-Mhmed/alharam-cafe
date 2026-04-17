@@ -48,6 +48,22 @@
     </header>
 
     <main class="container menu-layout">
+      <div class="menu-toolbar" role="search">
+        <label class="menu-search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input
+            type="search"
+            id="menuSearch"
+            placeholder="ابحث في المنيو..."
+            autocomplete="off"
+            enterkeyhint="search"
+            aria-label="ابحث في المنيو عن أي صنف"
+          />
+        </label>
+        <p class="menu-search-hint" id="menuSearchEmpty" hidden>
+          لا توجد نتائج مطابقة لبحثك.
+        </p>
+      </div>
       <section class="menu-section" id="hot">
         <div class="section-head">
           <h2>مشروبات ساخنة</h2>
@@ -61,82 +77,106 @@
           <div class="menu-grid">
           <article class="menu-item">
             <h3>شاي</h3>
-            <p>شاي ساخن بطعم اصيل.</p>
+            <p>كوباية شاي سخن بطعم أصيل.</p>
             <strong>15 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>شاي فليفر</h3>
-            <p>شاي فليفر ساخن بطعم اصيل.</p>
+            <p>شاي بنكهة اختيارك، سخن ومنعش.</p>
             <strong>20 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>قهوة تركي</h3>
-            <p>قهوة تركي سادة او مضبوط.</p>
-            <strong>25 / 35 EGP</strong>
+            <p>قهوة تركي سادة أو مظبوط برغوة خفيفة.</p>
+            <div class="prices" aria-label="الأسعار حسب الحجم">
+              <span class="price-tag"><span class="size">S</span> 25 EGP</span>
+              <span class="price-tag"><span class="size">D</span> 35 EGP</span>
+            </div>
           </article>
           <article class="menu-item">
             <h3>قهوة فرنساوي</h3>
-            <p>فرنساوي خفيفة او تقيلة.</p>
+            <p>قهوة فرنساوي خفيفة أو تقيلة بطعم غني.</p>
             <strong>30 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>قهوة بندق</h3>
-            <p>قهوة بندق سادة او مضبوط.</p>
+            <p>قهوة بنكهة البندق على مزاجك سادة أو مظبوط.</p>
             <strong>45 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>قهوة نوتيلا</h3>
-            <p>قهوة نوتيلا سادة او مضبوطة.</p>
+            <p>قهوة كريمية بنكهة نوتيلا.</p>
             <strong>45 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>اسبرسو</h3>
-            <p>اسبريسو مركز بطعم قوي.</p>
-            <strong>35 / 45 EGP</strong>
+            <p>شوت اسبرسو مركز بطعم قوي.</p>
+            <div class="prices" aria-label="الأسعار حسب الحجم">
+              <span class="price-tag"><span class="size">S</span> 35 EGP</span>
+              <span class="price-tag"><span class="size">D</span> 45 EGP</span>
+            </div>
           </article>
           <article class="menu-item">
             <h3>ميكاتو</h3>
-            <p>اسبريسو مع لمسة حليب.</p>
-            <strong>45 / 55 EGP</strong>
+            <p>اسبريسو مع لمسة حليب ورغوة خفيفة.</p>
+            <div class="prices" aria-label="الأسعار حسب الحجم">
+              <span class="price-tag"><span class="size">M</span> 45 EGP</span>
+              <span class="price-tag"><span class="size">L</span> 55 EGP</span>
+            </div>
           </article>
           <article class="menu-item">
             <h3>كابتشينو</h3>
-            <p>قهوة اسبريسو مع حليب ورغوة.</p>
-            <strong>60 / 90 EGP</strong>
+            <p>اسبريسو مع حليب مبخر ورغوة كثيفة.</p>
+            <div class="prices" aria-label="الأسعار حسب الحجم">
+              <span class="price-tag"><span class="size">M</span> 60 EGP</span>
+              <span class="price-tag"><span class="size">L</span> 90 EGP</span>
+            </div>
           </article>
           <article class="menu-item">
             <h3>لاتيه</h3>
-            <p>لاتيه ساخن ناعم.</p>
-            <strong>50 / 80 EGP</strong>
+            <p>لاتيه كريمي بحليب ناعم مع اسبرسو.</p>
+            <div class="prices" aria-label="الأسعار حسب الحجم">
+              <span class="price-tag"><span class="size">M</span> 50 EGP</span>
+              <span class="price-tag"><span class="size">L</span> 80 EGP</span>
+            </div>
           </article>
           <article class="menu-item">
             <h3>فلات وايت</h3>
-            <p>اسبريسو مع حليب كثيف القوام.</p>
-            <strong>75 / 110 EGP</strong>
+            <p>اسبرسو قوي مع حليب مخملي.</p>
+            <div class="prices" aria-label="الأسعار حسب الحجم">
+              <span class="price-tag"><span class="size">M</span> 75 EGP</span>
+              <span class="price-tag"><span class="size">L</span> 110 EGP</span>
+            </div>
           </article>
           <article class="menu-item">
             <h3>موكا</h3>
-            <p>قهوة بالشوكولاتة.</p>
-            <strong>60 / 90 EGP</strong>
+            <p>اسبرسو ممزوج بشوكولاتة وحليب.</p>
+            <div class="prices" aria-label="الأسعار حسب الحجم">
+              <span class="price-tag"><span class="size">M</span> 60 EGP</span>
+              <span class="price-tag"><span class="size">L</span> 90 EGP</span>
+            </div>
           </article>
           <article class="menu-item">
             <h3>نسكافيه</h3>
-            <p>نسكافيه ساخن سريع التحضير.</p>
-            <strong>35 / 50 EGP</strong>
+            <p>نسكافيه كريمي سريع التحضير.</p>
+            <div class="prices" aria-label="الأسعار حسب الحجم">
+              <span class="price-tag"><span class="size">M</span> 35 EGP</span>
+              <span class="price-tag"><span class="size">L</span> 50 EGP</span>
+            </div>
           </article>
           <article class="menu-item">
             <h3>كورتو</h3>
-            <p>مشروب قهوة ساخن.</p>
+            <p>قهوة قصيرة وقوية لمحبي الطعم المركز.</p>
             <strong>70 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>امريكانو</h3>
-            <p>قهوة امريكانو ساخنة.</p>
+            <p>اسبرسو مخفف بمياه ساخنة بطعم واضح.</p>
             <strong>40 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>هوت شوكليت</h3>
-            <p>هوت شوكليت ساخنة.</p>
+            <p>شوكولاتة ساخنة غنية وكريمية.</p>
             <strong>45 EGP</strong>
           </article>
         </div>
@@ -156,22 +196,22 @@
           <div class="menu-grid">
           <article class="menu-item">
             <h3>ايس لاتيه</h3>
-            <p>لاتيه بارد.</p>
+            <p>لاتيه مثلج بحليب كريمي.</p>
             <strong>50 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ايس امريكانو</h3>
-            <p>قهوة امريكانو مثلجة.</p>
+            <p>امريكانو مثلج خفيف ومنعش.</p>
             <strong>45 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ايس موكا</h3>
-            <p>موكا مثلجة.</p>
+            <p>موكا مثلجة بالشوكولاتة.</p>
             <strong>70 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ايس كوفي</h3>
-            <p>كوفي مثلجة.</p>
+            <p>قهوة مثلجة بطعم غني.</p>
             <strong>60 EGP</strong>
           </article>
         </div>
@@ -185,17 +225,17 @@
           <div class="menu-grid">
           <article class="menu-item">
             <h3>فرابتشينو كراميل</h3>
-            <p>فرابتشينو كراميل بارد.</p>
+            <p>فرابتشينو كراميل كريمي ومثلج.</p>
             <strong>60 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>فرابتشينو فانيليا</h3>
-            <p>فرابتشينو فانيليا بارد.</p>
+            <p>فرابتشينو فانيليا ناعم ومثلج.</p>
             <strong>60 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>فرابتشينو شوكليت</h3>
-            <p>فرابتشينو شوكليت بارد.</p>
+            <p>فرابتشينو شوكليت غني ومثلج.</p>
             <strong>60 EGP</strong>
           </article>
         </div>
@@ -209,62 +249,62 @@
           <div class="menu-grid">
           <article class="menu-item">
             <h3>ميلك شيك فانيليا</h3>
-            <p>ميلك شيك فانيليا.</p>
+            <p>ميلك شيك فانيليا كريمي ومثلج.</p>
             <strong>55 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ميلك شيك شوكولاتة</h3>
-            <p>ميلك شيك شوكليت.</p>
+            <p>ميلك شيك شوكولاتة غني ومثلج.</p>
             <strong>50 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ميلك شيك وايت شوكليت</h3>
-            <p>ميلك شيك شوكليت ابيض.</p>
+            <p>ميلك شيك وايت شوكليت بطعم ناعم.</p>
             <strong>55 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ميلك شيك نوتيلا</h3>
-            <p>ميلك شيك بنكهة نوتيلا.</p>
+            <p>ميلك شيك نوتيلا كريمي.</p>
             <strong>55 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ميلك شيك لوتس</h3>
-            <p>ميلك شيك بنكهة لوتس.</p>
+            <p>ميلك شيك لوتس بطعم بسكوت مميز.</p>
             <strong>55 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ميلك شيك كوفي</h3>
-            <p>ميلك شيك بطعم القهوة.</p>
+            <p>ميلك شيك بالقهوة لعشاق الكافيين.</p>
             <strong>55 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ميلك شيك اوريو</h3>
-            <p>ميلك شيك بنكهة الاوريو.</p>
+            <p>ميلك شيك أوريو بقطع بسكوت.</p>
             <strong>55 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ميلك شيك فراولة</h3>
-            <p>ميلك شيك بنكهة الفراولة.</p>
+            <p>ميلك شيك فراولة بطعم فريش.</p>
             <strong>55 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ميلك شيك مانجو</h3>
-            <p>ميلك شيك بنكهة المانجو.</p>
+            <p>ميلك شيك مانجو بطعم صيفي.</p>
             <strong>55 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ميلك شيك باشون فروت</h3>
-            <p>ميلك شيك بنكهة الباشون فروت.</p>
+            <p>ميلك شيك باشون فروت بطعم استوائي.</p>
             <strong>55 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ميلك شيك بلوبيري</h3>
-            <p>ميلك شيك بنكهة البلوبيري.</p>
+            <p>ميلك شيك بلوبيري بطعم غني.</p>
             <strong>55 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>ميلك شيك بستاشيو</h3>
-            <p>ميلك شيك بنكهة البستاشيو.</p>
+            <p>ميلك شيك بستاشيو بطعم كريمي.</p>
             <strong>55 EGP</strong>
           </article>
         </div>
@@ -278,12 +318,12 @@
           <div class="menu-grid">
           <article class="menu-item">
             <h3>موهيتو كلاسيك</h3>
-            <p>موهيتو منعش.</p>
+            <p>موهيتو ليمون ونعناع فريش.</p>
             <strong>45 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>موهيتو فليفر</h3>
-            <p>موهيتو بنكهات متنوعة.</p>
+            <p>موهيتو بنكهة اختيارك بانتعاش أعلى.</p>
             <strong>50 EGP</strong>
           </article>
         </div>
@@ -297,42 +337,42 @@
           <div class="menu-grid">
           <article class="menu-item">
             <h3>عصير مانجو فريش</h3>
-            <p>عصير مانجو طبيعي.</p>
+            <p>عصير مانجو فريش بطعم طبيعي.</p>
             <strong>50 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>عصير فراولة فريش</h3>
-            <p>عصير فراولة طبيعي.</p>
+            <p>عصير فراولة فريش بطعم طبيعي.</p>
             <strong>45 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>عصير جوافة فريش</h3>
-            <p>عصير جوافة طبيعي.</p>
+            <p>عصير جوافة فريش بطعم طبيعي.</p>
             <strong>40 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>عصير بطيخ فريش</h3>
-            <p>عصير بطيخ طبيعي.</p>
+            <p>عصير بطيخ فريش منعش.</p>
             <strong>45 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>عصير بلح فريش</h3>
-            <p>عصير بلح طبيعي.</p>
+            <p>عصير بلح فريش غني ومغذي.</p>
             <strong>50 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>عصير موز فريش</h3>
-            <p>عصير موز طبيعي.</p>
+            <p>عصير موز فريش كريمي.</p>
             <strong>45 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>عصير ليمون فريش</h3>
-            <p>عصير ليمون طبيعي.</p>
+            <p>عصير ليمون فريش منعش.</p>
             <strong>35 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>عصير ليمون نعناع فريش</h3>
-            <p>عصير ليمون مع نعناع طبيعي.</p>
+            <p>ليمون نعناع فريش بطعم منعش.</p>
             <strong>45 EGP</strong>
           </article>
         </div>
@@ -346,22 +386,22 @@
           <div class="menu-grid">
           <article class="menu-item">
             <h3>سموزي فراولة</h3>
-            <p>سموزي فراولة.</p>
+            <p>سموزي فراولة كثيف ومثلج.</p>
             <strong>50 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>سموزي مانجو</h3>
-            <p>سموزي مانجو.</p>
+            <p>سموزي مانجو كثيف ومثلج.</p>
             <strong>50 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>سموزي باشون فروت</h3>
-            <p>سموزي باشون فروت.</p>
+            <p>سموزي باشون فروت بطعم استوائي.</p>
             <strong>50 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>سموزي بلوبيري</h3>
-            <p>سموزي بلوبيري.</p>
+            <p>سموزي بلوبيري غني ومثلج.</p>
             <strong>50 EGP</strong>
           </article>
         </div>
@@ -381,92 +421,92 @@
           <div class="menu-grid">
           <article class="menu-item">
             <h3>Loacker 30g</h3>
-            <p>(Cremkakao - Vanilla - Alpine Milk - Napolitaner)</p>
+            <p>ويفر لوكر 30 جم بنكهات: Cremkakao، Vanilla، Alpine Milk، Napolitaner.</p>
             <strong>30 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Delisso</h3>
-            <p>سناك ديليسو.</p>
+            <p>سناك ديليسو خفيف ومناسب مع أي مشروب.</p>
             <strong>25 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Toren Wafers</h3>
-            <p>(Bourbon Vanilla - Hazelnut - Cocoa - Extra Creamy)</p>
+            <p>ويفر تورن بنكهات: Bourbon Vanilla، Hazelnut، Cocoa، Extra Creamy.</p>
             <strong>25 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Pringles 40g</h3>
-            <p>برينجلز 40 جرام.</p>
+            <p>برينجلز 40 جم مقرمش وسريع.</p>
             <strong>50 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Mentos</h3>
-            <p>(Mint - Strawberry - Fruit - Rainbow)</p>
+            <p>مينتوس بنكهات: Mint، Strawberry، Fruit، Rainbow.</p>
             <strong>20 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Wafer Rolls</h3>
-            <p>ويفر رولز.</p>
+            <p>ويفر رولز مقرمش بحشوة لذيذة.</p>
             <strong>50 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Wafer Rolls Mini</h3>
-            <p>ويفر رولز ميني.</p>
+            <p>ويفر رولز ميني خفيف وسهل المشاركة.</p>
             <strong>25 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Chokies</h3>
-            <p>شوكيز.</p>
+            <p>شوكليت خفيف مناسب للتحلية.</p>
             <strong>15 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Larch Molten Cake</h3>
-            <p>كعكة لارش مولتن كيك.</p>
+            <p>مولتن كيك لارش بطعم شوكولاتة غني.</p>
             <strong>25 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Toren Wafers Tamam</h3>
-            <p>ويفر تورن وايفرز تامام.</p>
+            <p>ويفر تورن “Tamam” بطعم كريمي.</p>
             <strong>25 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Toren Wafers Nusso</h3>
-            <p>ويفر تورن وايفرز نيسو.</p>
+            <p>ويفر تورن “Nusso” بطعم بندق مميز.</p>
             <strong>25 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Sovx</h3>
-            <p>(مكسرات مشكله - كاجو - فستق)</p>
+            <p>مكسرات تسالي: مشكلة / كاجو / فستق.</p>
             <strong>25 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Yes Nuts</h3>
-            <p>(جبنة شيدر - ذرة حلوة - باربكيو)</p>
+            <p>سناك Yes Nuts بنكهات: جبنة شيدر / ذرة حلوة / باربكيو / سور كريم.</p>
             <strong>10 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Jelaxy Sour Sticks</h3>
-            <p>جيلاكسي سور ستيكس.</p>
+            <p>سور ستيكس بطعم حامض ولذيذ.</p>
             <strong>15 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Molto Magnum</h3>
-            <p>مولتو ماجنم.</p>
+            <p>مولتو ماجنم تحلية سريعة بطعم غني.</p>
             <strong>20 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Bake Rolz</h3>
-            <p>بيك رولز.</p>
+            <p>بيك رولز مقرمش ومناسب للتسالي.</p>
             <strong>15 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Sun Bites</h3>
-            <p>سون بيتس.</p>
+            <p>صن بايتس خفيف ومقرمش.</p>
             <strong>15 EGP</strong>
           </article>
           <article class="menu-item">
             <h3>Chipsy</h3>
-            <p>شيبسي.</p>
+            <p>شيبسي مقرمش للتسالي.</p>
             <strong>15 EGP</strong>
           </article>
         </div>
@@ -487,12 +527,12 @@
           <div class="menu-grid">
             <article class="menu-item">
               <h3>طاجن نوتيلا كبير</h3>
-              <p>طاجن بنكهة نوتيلا.</p>
+              <p>طاجن نوتيلا كبير غني ومثالي للمشاركة.</p>
               <strong>60 EGP</strong>
             </article>
             <article class="menu-item">
               <h3>طاجن نوتيلا صغير</h3>
-              <p>طاجن بنكهة نوتيلا.</p>
+              <p>طاجن نوتيلا صغير خفيف وسريع.</p>
               <strong>35 EGP</strong>
             </article>
 
@@ -500,6 +540,17 @@
         </div>
       </section>
     </main>
+
+    <a
+      id="whatsappFab"
+      class="whatsapp-fab"
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="تواصل عبر واتساب مع Alharam Cafe"
+    >
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <footer class="footer">
       <div class="container">

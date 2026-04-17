@@ -1735,12 +1735,13 @@ h1 {
 }
 
 .quick-links {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 0.75rem;
-  flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
   max-width: 760px;
+  width: 100%;
 }
 
 .quick-links a {
@@ -1756,6 +1757,12 @@ h1 {
   box-shadow: 0 6px 14px rgba(22, 33, 41, 0.2);
   backdrop-filter: blur(3px);
   transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 42px;
+  white-space: normal;
 }
 
 .quick-links a:hover {
@@ -2046,13 +2053,9 @@ html[data-theme="dark"] #scrollTopBtn {
   }
 
   .quick-links {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    gap: 0.45rem;
-    padding: 0.1rem 0.1rem 0.35rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    max-width: 520px;
   }
 
   .quick-links::-webkit-scrollbar {
@@ -2060,12 +2063,9 @@ html[data-theme="dark"] #scrollTopBtn {
   }
 
   .quick-links a {
-    flex: 0 0 auto;
-    min-width: 130px;
-    text-align: center;
-    font-size: 0.88rem;
-    padding: 0.48rem 0.68rem;
-    scroll-snap-align: start;
+    font-size: 0.86rem;
+    padding: 0.46rem 0.6rem;
+    min-height: 40px;
   }
 
   .hero-highlights span {
@@ -2186,13 +2186,25 @@ html[data-theme="dark"] #scrollTopBtn {
   }
 
   .quick-links a {
-    min-width: 118px;
     font-size: 0.82rem;
+    padding: 0.45rem 0.6rem;
   }
 
   .menu-item strong {
     font-size: 0.82rem;
     padding: 0.18rem 0.52rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .quick-links {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+
+  .quick-links a {
+    font-size: 0.82rem;
+    padding: 0.44rem 0.6rem;
   }
 }
 
@@ -2211,32 +2223,137 @@ html[data-theme="dark"] #scrollTopBtn {
   }
 }
 
-/* Responsive category buttons (section buttons) */
-.hero .quick-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: clamp(0.45rem, 1.4vw, 0.75rem);
-  width: min(760px, 100%);
-  margin: 0.2rem auto 0;
-  padding: 0;
+.menu-item .prices {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+  align-self: flex-start;
 }
 
-.hero .quick-links a {
+.menu-item .price-tag {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 44px; /* touch target */
-  padding: clamp(0.48rem, 1.6vw, 0.62rem) clamp(0.7rem, 2.4vw, 1.15rem);
-  font-size: clamp(0.82rem, 2.6vw, 0.95rem);
-  line-height: 1.15;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  -webkit-tap-highlight-color: transparent;
+  gap: 0.35rem;
+  border-radius: 999px;
+  padding: 0.2rem 0.58rem;
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-soft), var(--primary));
+  white-space: nowrap;
+}
+
+.menu-item .price-tag .size {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.6rem;
+  height: 1.35rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 0.78em;
+  letter-spacing: 0.2px;
 }
 
 @media (max-width: 420px) {
-  .hero .quick-links {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .menu-item .price-tag {
+    font-size: 0.84rem;
+  }
+}
+
+/* بحث المنيو + زر واتساب */
+.menu-toolbar {
+  margin-bottom: 1rem;
+}
+
+.menu-search {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong, #fffdfa);
+  box-shadow: 0 6px 16px rgba(32, 48, 61, 0.08);
+}
+
+.menu-search i {
+  color: var(--muted);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.menu-search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  outline: none;
+}
+
+.menu-search input::placeholder {
+  color: var(--muted);
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.menu-search-hint {
+  margin: 0.65rem 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.menu-item.is-hidden-search,
+.category-block.is-hidden-search,
+.menu-section.is-hidden-search {
+  display: none !important;
+}
+
+.whatsapp-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #25d366;
+  color: #fff;
+  font-size: 1.65rem;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.55);
+}
+
+.whatsapp-fab:focus-visible {
+  outline: 3px solid rgba(37, 211, 102, 0.45);
+  outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+  .whatsapp-fab {
+    right: 12px;
+    bottom: 16px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
   }
 }
