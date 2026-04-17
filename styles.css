@@ -2195,3 +2195,18 @@ html[data-theme="dark"] #scrollTopBtn {
     padding: 0.18rem 0.52rem;
   }
 }
+
+.brand-logo {
+  display: block;
+  width: clamp(130px, 20vw, 230px);
+  height: auto;
+  margin: 0 auto 0.55rem;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.35));
+}
+
+@media (max-width: 650px) {
+  .brand-logo {
+    width: clamp(92px, 26vw, 160px);
+    margin-bottom: 0.45rem;
+  }
+}
