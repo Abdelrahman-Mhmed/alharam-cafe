@@ -35,6 +35,20 @@ if (whatsappFab && WHATSAPP_NUMBER.replace(/\D/g, "").length >= 10) {
   });
 }
 
+function arabicItemCountLabel(count) {
+  if (count === 2) return "2 صنف";
+  if (count >= 3 && count <= 10) return `${count} اصناف`;
+  return `${count} صنف`;
+}
+
+document.querySelectorAll(".category-block").forEach((block) => {
+  const badge = block.querySelector(".category-head span");
+  const count = block.querySelectorAll(".menu-item").length;
+  if (badge && count) {
+    badge.textContent = arabicItemCountLabel(count);
+  }
+});
+
 const menuSearchInput = document.getElementById("menuSearch");
 const menuSearchEmpty = document.getElementById("menuSearchEmpty");
 
